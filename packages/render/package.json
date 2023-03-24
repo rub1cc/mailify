@@ -1,0 +1,41 @@
+{
+  "name": "@mailify/render",
+  "version": "0.0.1",
+  "description": "Render JSX to html",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --external react",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --external react --watch",
+    "lint": "eslint",
+    "clean": "rm -rf dist",
+    "prettier": "prettier --check \"**/*.{ts,tsx,md}\"",
+    "prettier:fix": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "keywords": [
+    "react",
+    "email"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "eslint": "^8.36.0",
+    "prettier": "^2.8.4",
+    "tsconfig": "workspace:*",
+    "tsup": "^6.6.3"
+  },
+  "dependencies": {
+    "@types/pretty": "^2.0.1",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.7",
+    "pretty": "^2.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
+}

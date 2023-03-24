@@ -1,0 +1,44 @@
+{
+  "name": "@mailify/elements",
+  "version": "0.0.1",
+  "description": "Elements for creating email template using React",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --external react",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --external react --watch",
+    "lint": "eslint",
+    "clean": "rm -rf dist",
+    "prettier": "prettier --check \"**/*.{ts,tsx,md}\"",
+    "prettier:fix": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "keywords": [
+    "react",
+    "email"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@mailify/html": "workspace:*",
+    "@mailify/head": "workspace:*",
+    "@mailify/body": "workspace:*",
+    "@mailify/container": "workspace:*",
+    "@mailify/row": "workspace:*",
+    "@mailify/column": "workspace:*",
+    "@mailify/typography": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "eslint": "^8.36.0",
+    "prettier": "^2.8.4",
+    "react": "18.2.0",
+    "tsconfig": "workspace:*",
+    "tsup": "^6.6.3"
+  }
+}
